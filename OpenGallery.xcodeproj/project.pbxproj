@@ -7,18 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A1AA81C02F3FB4A90083171B /* OpenGalleryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1AA81BF2F3FB4A90083171B /* OpenGalleryApp.swift */; };
-		A1AA81C22F3FB4A90083171B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1AA81C12F3FB4A90083171B /* ContentView.swift */; };
-		A1AA81C42F3FB4AA0083171B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1AA81C32F3FB4AA0083171B /* Assets.xcassets */; };
-		A1AA81C72F3FB4AA0083171B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1AA81C62F3FB4AA0083171B /* Preview Assets.xcassets */; };
+		A1AA81D52F3FBB100083171B /* OpenGalleryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1AA81D42F3FBB100083171B /* OpenGalleryApp.swift */; };
+		A1AA81D92F3FBDF10083171B /* PresentationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1AA81D82F3FBDF10083171B /* PresentationView.swift */; };
+		A1AA81DB2F3FBFFF0083171B /* Artwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1AA81DA2F3FBFFF0083171B /* Artwork.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A1AA81BC2F3FB4A90083171B /* OpenGallery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenGallery.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		A1AA81BF2F3FB4A90083171B /* OpenGalleryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenGalleryApp.swift; sourceTree = "<group>"; };
-		A1AA81C12F3FB4A90083171B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		A1AA81C32F3FB4AA0083171B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		A1AA81C62F3FB4AA0083171B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A1AA81D42F3FBB100083171B /* OpenGalleryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenGalleryApp.swift; sourceTree = "<group>"; };
+		A1AA81D82F3FBDF10083171B /* PresentationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationView.swift; sourceTree = "<group>"; };
+		A1AA81DA2F3FBFFF0083171B /* Artwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artwork.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,20 +49,59 @@
 		A1AA81BE2F3FB4A90083171B /* OpenGallery */ = {
 			isa = PBXGroup;
 			children = (
-				A1AA81BF2F3FB4A90083171B /* OpenGalleryApp.swift */,
-				A1AA81C12F3FB4A90083171B /* ContentView.swift */,
-				A1AA81C32F3FB4AA0083171B /* Assets.xcassets */,
-				A1AA81C52F3FB4AA0083171B /* Preview Content */,
+				A1AA81D32F3FBA050083171B /* Widgets */,
+				A1AA81D22F3FB9FE0083171B /* Persistance */,
+				A1AA81D12F3FB9F50083171B /* Services */,
+				A1AA81CF2F3FB9E10083171B /* Views */,
+				A1AA81CE2F3FB9D80083171B /* Models */,
+				A1AA81CD2F3FB9C60083171B /* App */,
 			);
 			path = OpenGallery;
 			sourceTree = "<group>";
 		};
-		A1AA81C52F3FB4AA0083171B /* Preview Content */ = {
+		A1AA81CD2F3FB9C60083171B /* App */ = {
 			isa = PBXGroup;
 			children = (
-				A1AA81C62F3FB4AA0083171B /* Preview Assets.xcassets */,
+				A1AA81D42F3FBB100083171B /* OpenGalleryApp.swift */,
 			);
-			path = "Preview Content";
+			path = App;
+			sourceTree = "<group>";
+		};
+		A1AA81CE2F3FB9D80083171B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A1AA81DA2F3FBFFF0083171B /* Artwork.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A1AA81CF2F3FB9E10083171B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A1AA81D82F3FBDF10083171B /* PresentationView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A1AA81D12F3FB9F50083171B /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		A1AA81D22F3FB9FE0083171B /* Persistance */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Persistance;
+			sourceTree = "<group>";
+		};
+		A1AA81D32F3FBA050083171B /* Widgets */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Widgets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -99,6 +136,7 @@
 				TargetAttributes = {
 					A1AA81BB2F3FB4A90083171B = {
 						CreatedOnToolsVersion = 15.4;
+						LastSwiftMigration = 1540;
 					};
 				};
 			};
@@ -125,8 +163,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A1AA81C72F3FB4AA0083171B /* Preview Assets.xcassets in Resources */,
-				A1AA81C42F3FB4AA0083171B /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,8 +173,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A1AA81C22F3FB4A90083171B /* ContentView.swift in Sources */,
-				A1AA81C02F3FB4A90083171B /* OpenGalleryApp.swift in Sources */,
+				A1AA81D92F3FBDF10083171B /* PresentationView.swift in Sources */,
+				A1AA81DB2F3FBFFF0083171B /* Artwork.swift in Sources */,
+				A1AA81D52F3FBB100083171B /* OpenGalleryApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,9 +306,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"OpenGallery/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = UVH64BQZD2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -288,6 +326,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.jdlc.OpenGallery;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -298,9 +337,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"OpenGallery/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = UVH64BQZD2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;

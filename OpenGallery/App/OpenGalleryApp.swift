@@ -8,10 +8,10 @@
 import SwiftUI
 
 @main
-struct OpenGalleryApp: App {
-    var body: some Scene {
+struct OpenGallery: App {
+    var body: some Scene{
         WindowGroup {
-            ContentView()
+            PresentationView()
         }
     }
 }
