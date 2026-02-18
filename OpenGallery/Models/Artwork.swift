@@ -8,8 +8,8 @@
 import Foundation
 
 // Minimal necessary
-struct Artwork {
-    var id: Int
+struct Artwork: Identifiable, Decodable {
+    var id: String
     var title: String
     var artist: String
     var imageURL: URL
