@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SwiftData
 
 @main
 struct OpenGallery: App {
@@ -13,5 +14,6 @@ struct OpenGallery: App {
         WindowGroup {
             PresentationView()
         }
+        .modelContainer(for: FavoriteArtwork.self)
     }
 }

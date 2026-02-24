@@ -25,20 +25,23 @@ struct PresentationView: View {
     ]
     
     
-    // Looks faded (artworkcard view) please fix
     var body: some View {
         NavigationStack {
-            ScrollView {
-                LazyVStack {
-                    ForEach(artworks) { artwork in
-                        NavigationLink(destination: ArtworkDetailView(artwork: artwork).transition(.opacity.animation(.easeOut(duration: 0.3)))) {
-                            ArtworkCardView(artwork: artwork)
-                        }
+            TabView
+            {
+                ForEach(artworks) { artwork in
+                    NavigationLink(value: artwork) {
+                        ArtworkCardView(artwork: artwork).padding(.horizontal, 24)
                     }
-                    .buttonStyle(PlainButtonStyle())
+                    .buttonStyle(.plain)
                 }
             }
+            .tabViewStyle(.page(indexDisplayMode: .never))
             .navigationTitle("Open Gallery")
+            .navigationBarTitleDisplayMode(.inline)
+            .navigationDestination(for: Artwork.self) {
+                artwork in ArtworkDetailView(artwork: artwork).transition(.opacity)
+            }
         }
     }
 }

@@ -8,7 +8,7 @@
 import Foundation
 
 // Minimal necessary
-struct Artwork: Identifiable, Decodable {
+struct Artwork: Identifiable, Hashable {
     var id: String
     var title: String
     var artist: String

@@ -13,6 +13,8 @@
 		A1AA81DF2F465A670083171B /* ArtworkCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1AA81DE2F465A670083171B /* ArtworkCardView.swift */; };
 		A1AA81E12F465A700083171B /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1AA81E02F465A700083171B /* FavoritesView.swift */; };
 		A1AA81E32F4660E30083171B /* ArtworkDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1AA81E22F4660E30083171B /* ArtworkDetailView.swift */; };
+		A1AA81E62F4D41720083171B /* FavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1AA81E52F4D41720083171B /* FavoriteButton.swift */; };
+		A1AA81EA2F4D437B0083171B /* FavoriteArtwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1AA81E92F4D437B0083171B /* FavoriteArtwork.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +25,8 @@
 		A1AA81DE2F465A670083171B /* ArtworkCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkCardView.swift; sourceTree = "<group>"; };
 		A1AA81E02F465A700083171B /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
 		A1AA81E22F4660E30083171B /* ArtworkDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkDetailView.swift; sourceTree = "<group>"; };
+		A1AA81E52F4D41720083171B /* FavoriteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteButton.swift; sourceTree = "<group>"; };
+		A1AA81E92F4D437B0083171B /* FavoriteArtwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteArtwork.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +59,7 @@
 		A1AA81BE2F3FB4A90083171B /* OpenGallery */ = {
 			isa = PBXGroup;
 			children = (
+				A1AA81E42F4D415F0083171B /* Buttons */,
 				A1AA81D32F3FBA050083171B /* Widgets */,
 				A1AA81D22F3FB9FE0083171B /* Persistance */,
 				A1AA81D12F3FB9F50083171B /* Services */,
@@ -77,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				A1AA81DA2F3FBFFF0083171B /* Artwork.swift */,
+				A1AA81E92F4D437B0083171B /* FavoriteArtwork.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -111,6 +117,14 @@
 			children = (
 			);
 			path = Widgets;
+			sourceTree = "<group>";
+		};
+		A1AA81E42F4D415F0083171B /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				A1AA81E52F4D41720083171B /* FavoriteButton.swift */,
+			);
+			path = Buttons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -184,8 +198,10 @@
 			files = (
 				A1AA81E12F465A700083171B /* FavoritesView.swift in Sources */,
 				A1AA81D92F3FBDF10083171B /* PresentationView.swift in Sources */,
+				A1AA81EA2F4D437B0083171B /* FavoriteArtwork.swift in Sources */,
 				A1AA81DB2F3FBFFF0083171B /* Artwork.swift in Sources */,
 				A1AA81D52F3FBB100083171B /* OpenGalleryApp.swift in Sources */,
+				A1AA81E62F4D41720083171B /* FavoriteButton.swift in Sources */,
 				A1AA81E32F4660E30083171B /* ArtworkDetailView.swift in Sources */,
 				A1AA81DF2F465A670083171B /* ArtworkCardView.swift in Sources */,
 			);
