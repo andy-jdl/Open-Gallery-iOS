@@ -23,5 +23,8 @@ struct FavoriteButton: View {
 }
 
 #Preview {
-    FavoriteButton(isSet: .constant(true))
+    VStack {
+        FavoriteButton(isSet: .constant(true)).padding(50)
+        FavoriteButton(isSet: .constant(false)).padding(50)
+    }
 }

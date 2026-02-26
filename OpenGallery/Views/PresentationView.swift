@@ -10,38 +10,63 @@ import SwiftUI
 
 struct PresentationView: View {
     
-    @State private var artworks: [Artwork] = [
-        Artwork(id: "wit:123",title: "(Archie)",artist: "Andy Warhol",
-        imageURL: URL(string: "https://whitneymedia.org/assets/artwork/45463/2014_29_185_cropped.jpg")!
+    // Place holder for now
+    @State var artworks: [Artwork] = [
+        Artwork(id: "342545",
+                title: "Christ Healing the Paralytic",
+                artist: "Johannes Wierix, Gerard van Groeningen, Gerard de Jode",
+                imageURL: URL(string:"https://nrs.harvard.edu/urn-3:HUAM:770258")!
+               ),
+        Artwork(
+            id: "6236",
+            title: "Study for New York Movie",
+            artist: "Edward Hopper",
+            imageURL: URL(string: "https://whitneymedia.org/assets/artwork/6236/70_276_cropped.jpg")!
         ),
-        Artwork(id: "aic:123", title: "Tri-Lobed Dish", artist: "Unknown", imageURL: URL(string: "https://www.artic.edu/iiif/2/92836a2a-9764-1ef4-1428-4042834d5b4b/full/600,/0/default.jpg")!
-        ),
-        Artwork(id: "lve:123", title: "Le Départ de Léonidas", artist: "Couder, Auguste, France", imageURL: URL(string: "https://collections.louvre.fr/media/cache/original/0000000021/0000055264/0000044572_OG.JPG")!
-        ),
-        Artwork(id: "aic:456",  title: "Dish with Undulating Peony-Leaf Scrolls", artist: "Unknown", imageURL: URL(string: "https://www.artic.edu/iiif/2/1f2e3249-c4ba-4e06-092f-e364972a2aa3/full/600,/0/default.jpg")!
-        ),
-        Artwork(id: "clv:123", title: "Obsession", artist: "Odilon Redon (French, 1840–1916),Printer: Monrocq", imageURL: URL(string: "https://openaccess-cdn.clevelandart.org/1931.49/1931.49_web.jpg")!
-        ),
+        Artwork(
+            id: "23968",
+            title: "Nude under a Pine Tree",
+            artist: "Pablo Picasso",
+            imageURL: URL(string: "https://www.artic.edu/iiif/2/b7b7ecd0-5a50-b89a-c72a-d435a1957c73/full/600,/0/default.jpg")!
+        )
     ]
     
     
+    @State private var showFavorites: Bool = false
+    
     var body: some View {
         NavigationStack {
-            TabView
-            {
+            TabView {
                 ForEach(artworks) { artwork in
                     NavigationLink(value: artwork) {
-                        ArtworkCardView(artwork: artwork).padding(.horizontal, 24)
+                        ArtworkCardView(artwork: artwork)
+                            .padding(.horizontal, 16)
                     }
                     .buttonStyle(.plain)
+                    
                 }
             }
             .tabViewStyle(.page(indexDisplayMode: .never))
             .navigationTitle("Open Gallery")
             .navigationBarTitleDisplayMode(.inline)
-            .navigationDestination(for: Artwork.self) {
-                artwork in ArtworkDetailView(artwork: artwork).transition(.opacity)
+            .navigationDestination(for: Artwork.self) { artwork in ArtworkDetailView(artwork: artwork)
+            }
+            .navigationDestination(isPresented: $showFavorites){
+                FavoriteView()
+            }
+            .toolbar {
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button {
+                        showFavorites = true
+                    } label : {
+                        Image(systemName: "heart.fill").foregroundColor(.red)
+                    }
+                }
             }
         }
     }
+}
+
+#Preview {
+    PresentationView()
 }
